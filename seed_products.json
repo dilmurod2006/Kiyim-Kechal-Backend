@@ -1,0 +1,718 @@
+{
+  "categories": [
+    "Accessories",
+    "Activewear",
+    "Dresses",
+    "Hoodies & Sweatshirts",
+    "Jackets & Coats",
+    "Jeans",
+    "Shirts",
+    "Shorts",
+    "Suits & Blazers",
+    "Sweaters & Knitwear",
+    "T-Shirts",
+    "Trousers & Chinos"
+  ],
+  "products": [
+    {
+      "name": "Essential Organic Cotton Crew Tee",
+      "description": "Mid-weight 180gsm organic cotton crew-neck tee with a regular fit and reinforced collar for everyday wear.",
+      "price": 24.99,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Pima Cotton V-Neck Tee",
+      "description": "Ultra-soft long-staple Pima cotton V-neck with a slim, tailored silhouette and breathable feel.",
+      "price": 32.0,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Heavyweight Boxy Tee",
+      "description": "260gsm combed cotton boxy-fit tee with dropped shoulders and a structured, street-ready drape.",
+      "price": 38.5,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Performance Tri-Blend Tee",
+      "description": "Moisture-wicking tri-blend tee with four-way stretch, ideal for training and active days.",
+      "price": 29.99,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Striped Breton Long-Sleeve Tee",
+      "description": "Classic Breton-stripe long-sleeve in soft jersey cotton with a relaxed nautical fit.",
+      "price": 34.95,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Pocket Slub Cotton Tee",
+      "description": "Textured slub-cotton tee with a single chest pocket and a lived-in vintage hand-feel.",
+      "price": 27.5,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Supima Pocket Tee Two-Pack",
+      "description": "Set of two premium Supima cotton pocket tees with colour-matched stitching and lasting shape retention.",
+      "price": 49.0,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Mercerised Cotton Polo Tee",
+      "description": "Mercerised cotton polo with a ribbed collar, three-button placket and a smart, polished finish.",
+      "price": 44.0,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Garment-Dyed Vintage Tee",
+      "description": "Pigment garment-dyed tee with a faded, washed-out look and an extra-soft broken-in texture.",
+      "price": 31.0,
+      "category": "T-Shirts",
+      "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Oxford Button-Down Shirt",
+      "description": "Timeless 100% cotton Oxford shirt with a button-down collar and a versatile regular fit.",
+      "price": 59.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Linen Camp-Collar Shirt",
+      "description": "Breathable European linen camp-collar shirt with a relaxed cut, perfect for warm-weather styling.",
+      "price": 65.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Flannel Check Overshirt",
+      "description": "Brushed cotton flannel overshirt in a heritage check, layer-ready with a soft, warm handle.",
+      "price": 72.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Poplin Slim-Fit Dress Shirt",
+      "description": "Wrinkle-resistant cotton poplin dress shirt with a slim fit and a crisp spread collar.",
+      "price": 54.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1563630423918-b58f07336ac9?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Chambray Western Shirt",
+      "description": "Lightweight chambray western shirt with pearl-snap buttons and double chest pockets.",
+      "price": 58.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Corduroy Shirt Jacket",
+      "description": "Fine-wale corduroy shirt jacket with a soft cotton lining and a structured workwear silhouette.",
+      "price": 89.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cuban-Collar Print Shirt",
+      "description": "Viscose Cuban-collar shirt with an all-over print and a fluid, breathable drape.",
+      "price": 49.99,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cotton-Twill Utility Shirt",
+      "description": "Durable cotton-twill utility shirt with flap pockets and a relaxed, functional cut.",
+      "price": 62.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1563630423918-b58f07336ac9?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Grandad-Collar Linen Shirt",
+      "description": "Collarless grandad-style linen shirt with a tonal placket and an easy, casual fit.",
+      "price": 56.0,
+      "category": "Shirts",
+      "image_url": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Heavyweight Fleece Pullover Hoodie",
+      "description": "450gsm brushed-back fleece hoodie with a double-layer hood and kangaroo pocket.",
+      "price": 68.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Zip-Through Cotton Hoodie",
+      "description": "Loopback cotton zip hoodie with metal hardware and ribbed cuffs for a clean finish.",
+      "price": 64.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Classic Crewneck Sweatshirt",
+      "description": "Mid-weight French-terry crewneck with set-in sleeves and a timeless relaxed fit.",
+      "price": 52.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Oversized Drop-Shoulder Hoodie",
+      "description": "Oversized brushed-fleece hoodie with dropped shoulders and an extended boxy hem.",
+      "price": 74.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1542406775-ade58c52d2e4?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Organic Cotton Raglan Sweatshirt",
+      "description": "Organic loopback cotton raglan sweatshirt with contrast stitching and a soft inner face.",
+      "price": 58.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tech-Fleece Training Hoodie",
+      "description": "Lightweight tech-fleece hoodie with bonded seams and quick-dry performance fabric.",
+      "price": 79.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Half-Zip Funnel-Neck Sweat",
+      "description": "Brushed-fleece half-zip with a funnel neck and zippered chest detail for cooler days.",
+      "price": 66.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Pigment-Dyed Vintage Hoodie",
+      "description": "Pigment-dyed heavyweight hoodie with a faded finish and a worn-in, vintage character.",
+      "price": 71.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1542406775-ade58c52d2e4?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Colour-Block Retro Sweatshirt",
+      "description": "Retro colour-block crewneck in brushed cotton with ribbed panels and a relaxed cut.",
+      "price": 60.0,
+      "category": "Hoodies & Sweatshirts",
+      "image_url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Waxed Cotton Field Jacket",
+      "description": "Weatherproof waxed-cotton field jacket with corduroy collar and multiple utility pockets.",
+      "price": 159.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Quilted Diamond Liner Jacket",
+      "description": "Lightweight diamond-quilted jacket with snap front and a warm poly-fill insulation.",
+      "price": 119.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Wool-Blend Overcoat",
+      "description": "Tailored wool-blend overcoat with a notch lapel and a clean single-breasted silhouette.",
+      "price": 229.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Hooded Rain Shell",
+      "description": "Seam-sealed waterproof rain shell with taped seams and an adjustable storm hood.",
+      "price": 134.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Denim Trucker Jacket",
+      "description": "Rigid cotton-denim trucker jacket with classic chest flaps and a timeless cut.",
+      "price": 98.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Down Puffer Jacket",
+      "description": "Responsibly sourced 700-fill down puffer with a water-repellent shell and packable design.",
+      "price": 189.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Harrington Bomber Jacket",
+      "description": "Cotton-blend Harrington with a ribbed collar, tartan lining and a heritage racing fit.",
+      "price": 109.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Shearling-Collar Trucker",
+      "description": "Cotton-twill trucker jacket with a cosy faux-shearling collar and a borg-lined body.",
+      "price": 145.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Lightweight Packable Windbreaker",
+      "description": "Featherweight ripstop windbreaker that packs into its own pocket with an elastic hem.",
+      "price": 79.0,
+      "category": "Jackets & Coats",
+      "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Slim-Fit Stretch Jeans",
+      "description": "Comfort-stretch denim jeans with a slim leg and a mid-rise waist for all-day wear.",
+      "price": 79.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Straight-Leg Selvedge Jeans",
+      "description": "14oz Japanese selvedge denim with a classic straight leg and authentic redline finish.",
+      "price": 129.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Relaxed Tapered Jeans",
+      "description": "Relaxed-through-the-thigh jeans with a clean tapered leg in mid-weight cotton denim.",
+      "price": 84.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Skinny-Fit Black Jeans",
+      "description": "Power-stretch skinny jeans in a deep black wash with excellent shape recovery.",
+      "price": 72.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Vintage Wash Loose Jeans",
+      "description": "Loose-fit jeans in a vintage stonewash with subtle whiskering and a wide leg.",
+      "price": 88.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Raw Denim Slim Tapered Jeans",
+      "description": "Untreated raw denim that fades to your wear pattern, cut in a modern slim-tapered shape.",
+      "price": 99.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Athletic-Fit Flex Jeans",
+      "description": "Athletic-fit jeans with extra room through the seat and thigh and four-way stretch denim.",
+      "price": 82.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cropped Wide-Leg Jeans",
+      "description": "Cropped wide-leg jeans in rigid cotton with a high rise and a clean raw hem.",
+      "price": 90.0,
+      "category": "Jeans",
+      "image_url": "https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Slim-Fit Stretch Chinos",
+      "description": "Cotton-stretch chinos with a slim fit, clean front and a refined all-day comfort.",
+      "price": 64.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Pleated Wool Trousers",
+      "description": "Single-pleat wool-blend trousers with a tailored taper and a smart, dressy drape.",
+      "price": 95.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Relaxed Linen Trousers",
+      "description": "Breathable linen trousers with an elastic drawstring waist and an easy relaxed leg.",
+      "price": 69.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cargo Utility Trousers",
+      "description": "Durable cotton-ripstop cargo trousers with bellowed side pockets and a regular fit.",
+      "price": 78.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tapered Tech Trousers",
+      "description": "Water-resistant four-way-stretch tech trousers with a tapered leg and hidden zip pockets.",
+      "price": 89.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Corduroy Straight Trousers",
+      "description": "Mid-wale corduroy trousers with a straight leg and a soft, brushed cotton finish.",
+      "price": 74.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Drawstring Jogger Pants",
+      "description": "Tapered jogger pants in brushed cotton with ribbed cuffs and a comfortable elastic waist.",
+      "price": 58.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Flat-Front Smart Chinos",
+      "description": "Versatile flat-front chinos in a structured cotton twill with a clean, modern cut.",
+      "price": 62.0,
+      "category": "Trousers & Chinos",
+      "image_url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cotton Twill Chino Shorts",
+      "description": "Mid-length cotton-twill chino shorts with a clean front and a comfortable regular fit.",
+      "price": 44.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Performance Training Shorts",
+      "description": "Lightweight quick-dry training shorts with a built-in liner and zippered back pocket.",
+      "price": 39.99,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Linen-Blend Drawstring Shorts",
+      "description": "Breathable linen-blend shorts with a drawstring waist and a relaxed warm-weather fit.",
+      "price": 42.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Denim Cut-Off Shorts",
+      "description": "Mid-weight denim shorts with a raw frayed hem and a classic five-pocket design.",
+      "price": 49.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cargo Utility Shorts",
+      "description": "Cotton-ripstop cargo shorts with multiple flap pockets and a durable everyday build.",
+      "price": 46.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Swim Trunks Quick-Dry",
+      "description": "Recycled-poly swim trunks with a quick-dry finish, mesh liner and elastic drawcord.",
+      "price": 38.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "French-Terry Sweat Shorts",
+      "description": "Soft French-terry sweat shorts with ribbed waistband and a relaxed lounge fit.",
+      "price": 36.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tailored Pleated Shorts",
+      "description": "Smart pleated shorts in a lightweight cotton blend with a clean, elevated finish.",
+      "price": 52.0,
+      "category": "Shorts",
+      "image_url": "https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Merino Wool Crew Sweater",
+      "description": "Fine-gauge 100% merino wool crew-neck sweater, breathable and naturally temperature-regulating.",
+      "price": 89.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Lambswool V-Neck Jumper",
+      "description": "Soft lambswool V-neck with ribbed trims and a classic, versatile fit.",
+      "price": 78.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Chunky Cable-Knit Sweater",
+      "description": "Hand-feel chunky cable-knit in a cotton-wool blend with a cosy, textured surface.",
+      "price": 95.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1610384104075-e05c8cf200c3?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cashmere-Blend Roll-Neck",
+      "description": "Luxurious cashmere-blend roll-neck with a slim drape and an ultra-soft handle.",
+      "price": 119.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1611911813383-67769b37a149?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Half-Zip Knitted Pullover",
+      "description": "Mid-weight half-zip knit with a funnel neck and ribbed cuffs for smart layering.",
+      "price": 84.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cotton Waffle-Knit Sweater",
+      "description": "Breathable waffle-knit cotton sweater with a textured weave and a relaxed crew neck.",
+      "price": 68.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Fair Isle Crew Knit",
+      "description": "Patterned Fair Isle crew-neck in a soft wool blend with a heritage winter motif.",
+      "price": 92.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1610384104075-e05c8cf200c3?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Shawl-Collar Cardigan",
+      "description": "Chunky shawl-collar cardigan in a wool blend with horn-effect buttons and deep pockets.",
+      "price": 105.0,
+      "category": "Sweaters & Knitwear",
+      "image_url": "https://images.unsplash.com/photo-1611911813383-67769b37a149?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Wrap Midi Dress",
+      "description": "Flattering wrap midi dress in fluid viscose with a self-tie waist and a flutter sleeve.",
+      "price": 89.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cotton Poplin Shirt Dress",
+      "description": "Crisp cotton-poplin shirt dress with a belted waist and a versatile day-to-night cut.",
+      "price": 79.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Pleated Satin Slip Dress",
+      "description": "Bias-cut satin slip dress with a subtle pleat and an elegant, fluid drape.",
+      "price": 98.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Knitted Bodycon Dress",
+      "description": "Fine-rib knitted bodycon dress with a high neck and a sculpting, stretchy fit.",
+      "price": 72.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Floral Tiered Maxi Dress",
+      "description": "Airy floral-print maxi with tiered skirt panels and a smocked, comfortable bodice.",
+      "price": 94.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Linen Sleeveless Shift Dress",
+      "description": "Breathable linen shift dress with a clean sleeveless cut and a relaxed summer fit.",
+      "price": 76.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tailored Blazer Dress",
+      "description": "Structured double-breasted blazer dress with padded shoulders and a sharp silhouette.",
+      "price": 119.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Ribbed Jersey T-Shirt Dress",
+      "description": "Soft ribbed-jersey T-shirt dress with short sleeves and an easy everyday drape.",
+      "price": 54.0,
+      "category": "Dresses",
+      "image_url": "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "High-Waist Compression Leggings",
+      "description": "Squat-proof high-waist leggings with four-way stretch and a hidden waistband pocket.",
+      "price": 58.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Seamless Training Sports Bra",
+      "description": "Medium-support seamless sports bra with breathable mesh zones and removable padding.",
+      "price": 42.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Quick-Dry Running Tee",
+      "description": "Lightweight quick-dry running tee with mesh ventilation and flatlock seams.",
+      "price": 36.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tech Training Joggers",
+      "description": "Tapered tech joggers in a stretch knit with zip pockets and an athletic fit.",
+      "price": 64.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Lightweight Running Shorts",
+      "description": "5-inch running shorts with a built-in liner, reflective trim and a quick-dry finish.",
+      "price": 39.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Thermal Base-Layer Top",
+      "description": "Brushed thermal base-layer with flatlock seams for warmth without bulk.",
+      "price": 49.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Mesh-Panel Training Tank",
+      "description": "Breathable training tank with strategic mesh panels and a sweat-wicking finish.",
+      "price": 34.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Full-Zip Track Jacket",
+      "description": "Stretch-knit full-zip track jacket with a stand collar and a streamlined athletic cut.",
+      "price": 72.0,
+      "category": "Activewear",
+      "image_url": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Single-Breasted Wool Blazer",
+      "description": "Half-canvassed single-breasted wool blazer with a notch lapel and a tailored fit.",
+      "price": 219.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Slim-Fit Two-Piece Suit",
+      "description": "Slim-fit two-piece suit in a wool blend with a clean lapel and a modern silhouette.",
+      "price": 349.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Linen Summer Blazer",
+      "description": "Unstructured linen blazer with patch pockets and a breathable, lightweight build.",
+      "price": 169.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Double-Breasted Tailored Blazer",
+      "description": "Structured double-breasted blazer with peak lapels and a sharp, formal finish.",
+      "price": 239.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Check Wool Sport Coat",
+      "description": "Heritage-check wool sport coat with a soft shoulder and a classic two-button front.",
+      "price": 199.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Tuxedo Dinner Jacket",
+      "description": "Satin-lapel tuxedo dinner jacket with a sleek single-button closure for formal occasions.",
+      "price": 289.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Stretch Travel Blazer",
+      "description": "Wrinkle-resistant stretch blazer engineered for travel with a comfortable unlined back.",
+      "price": 179.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Velvet Evening Blazer",
+      "description": "Plush cotton-velvet evening blazer with satin trims and a refined, statement look.",
+      "price": 209.0,
+      "category": "Suits & Blazers",
+      "image_url": "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Genuine Leather Belt",
+      "description": "Full-grain leather belt with a brushed metal buckle and a classic 35mm width.",
+      "price": 39.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Merino Wool Beanie",
+      "description": "Soft ribbed merino wool beanie with a fold-over cuff for warmth and stretch.",
+      "price": 28.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cashmere-Blend Scarf",
+      "description": "Lightweight cashmere-blend scarf with fringed ends and a luxuriously soft drape.",
+      "price": 49.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Leather Bifold Wallet",
+      "description": "Slim full-grain leather bifold wallet with card slots and a hidden note compartment.",
+      "price": 45.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Cotton Baseball Cap",
+      "description": "Six-panel cotton-twill baseball cap with an adjustable strap and a curved brim.",
+      "price": 24.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Ribbed Cotton Crew Socks Trio",
+      "description": "Three-pack of ribbed combed-cotton crew socks with cushioned soles and arch support.",
+      "price": 22.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Polarised Acetate Sunglasses",
+      "description": "Lightweight acetate frames with polarised UV400 lenses and spring hinges.",
+      "price": 79.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&h=750&q=80"
+    },
+    {
+      "name": "Knitted Wool Gloves",
+      "description": "Touchscreen-compatible knitted wool gloves with a soft lining and ribbed cuffs.",
+      "price": 32.0,
+      "category": "Accessories",
+      "image_url": "https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=600&h=750&q=80"
+    }
+  ]
+}

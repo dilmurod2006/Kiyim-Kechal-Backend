@@ -23,6 +23,7 @@ class Product(SQLModel, table=True):
     name: str = Field(index=True)
     description: str
     price: float
+    image_url: Optional[str] = Field(default=None)
     category_id: int = Field(foreign_key="category.id")
     
     # Corrected: back_populates now points to "products" in the Category model

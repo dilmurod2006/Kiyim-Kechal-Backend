@@ -29,14 +29,17 @@ services:
     environment:
       DATABASE_URL: "postgresql+asyncpg://postgres:postgres@db:5432/fastapi_ecom"
       DATABASE_SYNC_URL: "postgresql+psycopg2://postgres:postgres@db:5432/fastapi_ecom"
-      SECRET_KEY: "29-oFCiXVm9pyCtGkZVkQGxrO0RkPiqwYtTwie5SvZo"
+      SECRET_KEY: "i-3rihonAxSrDT4gY5Hm_w"
       ALGORITHM: "HS256"
       CELERY_BROKER_URL: "redis://redis:6379/0"
       CELERY_RESULT_BACKEND: "redis://redis:6379/1"
     depends_on:
-      - db
-      - redis
-      - worker
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
     volumes:
       - ./:/usr/src/app
     networks:
@@ -65,13 +68,17 @@ services:
     environment:
       DATABASE_URL: "postgresql+asyncpg://postgres:postgres@db:5432/fastapi_ecom"
       DATABASE_SYNC_URL: "postgresql+psycopg2://postgres:postgres@db:5432/fastapi_ecom"
-      SECRET_KEY: "29-oFCiXVm9pyCtGkZVkQGxrO0RkPiqwYtTwie5SvZo"
+      SECRET_KEY: "i-3rihonAxSrDT4gY5Hm_w"
       ALGORITHM: "HS256"
       CELERY_BROKER_URL: "redis://redis:6379/0"
       CELERY_RESULT_BACKEND: "redis://redis:6379/1"
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
     volumes:
       - ./:/usr/src/app
     networks:
@@ -82,11 +89,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: alembic upgrade head
+    command: sh -c "alembic upgrade head && { python seed.py || echo '[seed] seeding step failed - continuing so the API can still start'; }"
     environment:
       DATABASE_URL: "postgresql+asyncpg://postgres:postgres@db:5432/fastapi_ecom"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    volumes:
+      - ./:/usr/src/app
     networks:
       - app-network
     restart: "no"

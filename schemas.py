@@ -50,6 +50,7 @@ class ProductBase(SQLModel):
     name: str
     description: str
     price: float
+    image_url: Optional[str] = None
 
 # Properties for creating a new product (input)
 class ProductCreate(ProductBase):
