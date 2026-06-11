@@ -59,9 +59,10 @@ else:
         "http://127.0.0.1:4173",
         # Production frontend domains (no trailing slash — must match the
         # browser's Origin header exactly)
-        "http://kiyimlar-pro-uzb.gastro-analytics.uz",
-        "http://kiyim-kechak-pro.gastro-analytics.uz",
-        "http://prokiyim.gastro-analytics.uz",
+        "https://kiyimlar-pro-uzb.gastro-analytics.uz",
+        "https://kiyim-kechak-pro.gastro-analytics.uz",
+        "https://prokiyim.gastro-analytics.uz",
+        "https://api.gastro-analytics.uz",
     ]
     extra_origins = [o.strip() for o in _cors_env.split(",") if o.strip()]
     app.add_middleware(
