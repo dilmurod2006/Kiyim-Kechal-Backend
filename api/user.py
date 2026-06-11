@@ -1,4 +1,5 @@
 # api/users.py
+from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel.ext.asyncio.session import AsyncSession
 
@@ -7,13 +8,23 @@ from crud import crud_user
 from schemas import UserCreate, UserPublic
 
 from typing import Annotated
-from core.auth import create_access_token, get_current_user
+from core.auth import create_access_token, get_current_user, is_admin
 from fastapi.security import OAuth2PasswordRequestForm
 from core.security import verify_password
 
 from model.models import User
 
 router = APIRouter()
+
+
+@router.get("/", response_model=List[UserPublic], dependencies=[Depends(is_admin())])
+async def list_all_users(
+    session: AsyncSession = Depends(get_session),
+):
+    """
+    List all users. Admin only.
+    """
+    return await crud_user.get_all_users(session=session)
 
 @router.post("/", status_code=status.HTTP_201_CREATED, response_model=UserPublic)
 async def create_new_user(

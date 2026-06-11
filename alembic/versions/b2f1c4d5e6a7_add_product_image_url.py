@@ -19,14 +19,22 @@ branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
+def _columns(bind, table):
+    return {c["name"] for c in sa.inspect(bind).get_columns(table)}
+
+
 def upgrade() -> None:
-    """Upgrade schema."""
-    op.add_column(
-        'product',
-        sa.Column('image_url', sqlmodel.sql.sqltypes.AutoString(), nullable=True),
-    )
+    """Add product.image_url (idempotent — safe if it already exists)."""
+    bind = op.get_bind()
+    if "image_url" not in _columns(bind, "product"):
+        op.add_column(
+            "product",
+            sa.Column("image_url", sqlmodel.sql.sqltypes.AutoString(), nullable=True),
+        )
 
 
 def downgrade() -> None:
     """Downgrade schema."""
-    op.drop_column('product', 'image_url')
+    bind = op.get_bind()
+    if "image_url" in _columns(bind, "product"):
+        op.drop_column("product", "image_url")

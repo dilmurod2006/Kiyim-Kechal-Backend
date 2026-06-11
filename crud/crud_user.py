@@ -1,10 +1,20 @@
 # crud/crud_user.py
+from typing import List
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from model.models import User
 from schemas import UserCreate
 from core.security import get_password_hash
+
+
+async def get_all_users(session: AsyncSession) -> List[User]:
+    """
+    Retrieves all users, newest first.
+    """
+    statement = select(User).order_by(User.id.desc())
+    result = await session.exec(statement)
+    return result.all()
 
 async def create_user(user_data: UserCreate, session: AsyncSession) -> User:
     """

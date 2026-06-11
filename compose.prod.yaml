@@ -1,4 +1,9 @@
-version: '3.8'
+# Production stack for a single host (e.g. an AWS EC2 instance).
+# The image is built on the server; configuration comes from .env.prod
+# (which lives only on the server, never in git).
+#
+# Only the API port (8000) is published. Postgres and Redis stay on the
+# internal Docker network and are NOT reachable from the public internet.
 
 services:
   db:
@@ -6,42 +11,17 @@ services:
     env_file: .env.prod
     volumes:
       - db_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-    networks:
-      - app-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    image: fastapi-ecom-backend:latest
-    env_file: .env.prod
-    command: gunicorn --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 main:app --access-logfile /tmp/log.txt
-    ports:
-      - "8000:8000"
-    depends_on:
-      db:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      migrate:
-        condition: service_completed_successfully
-    volumes:
-      - ./:/app
     networks:
       - app-network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: redis:7-alpine
-    ports:
-      - "6379:6379"
     volumes:
       - redis_data:/data
     networks:
@@ -51,7 +31,50 @@ services:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
-      retries: 3
+      retries: 5
+
+  # One-shot: apply DB migrations, then seed (idempotent). If seeding fails
+  # the API still starts, as long as the schema migration succeeded.
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: fastapi-ecom-backend:latest
+    command: >
+      sh -c "alembic upgrade head &&
+             { python seed.py || echo '[seed] seeding step failed - continuing'; }"
+    env_file: .env.prod
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+    restart: "no"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: fastapi-ecom-backend:latest
+    command: >
+      gunicorn main:app
+      --workers 2
+      --worker-class uvicorn.workers.UvicornWorker
+      --bind 0.0.0.0:8000
+      --access-logfile -
+    env_file: .env.prod
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    networks:
+      - app-network
+    restart: unless-stopped
 
   worker:
     build:
@@ -67,25 +90,9 @@ services:
         condition: service_healthy
       migrate:
         condition: service_completed_successfully
-    volumes:
-      - ./:/app
     networks:
       - app-network
     restart: unless-stopped
-
-  migrate:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    image: fastapi-ecom-backend:latest
-    command: alembic upgrade head
-    env_file: .env.prod
-    depends_on:
-      db:
-        condition: service_healthy
-    networks:
-      - app-network
-    restart: "no"
 
 volumes:
   db_data:
@@ -94,4 +101,3 @@ volumes:
 networks:
   app-network:
     driver: bridge
-

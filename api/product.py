@@ -7,9 +7,7 @@ from core.db import get_session
 from crud import crud_product
 from schemas import ProductCreate, ProductPublic
 
-from typing import Annotated
-from core.auth import get_current_user, is_admin
-from model.models import User
+from core.auth import is_admin
 
 router = APIRouter()
 
@@ -28,11 +26,9 @@ async def create_new_product(
 @router.get("/", response_model=List[ProductPublic])
 async def get_all_products_list(
     session: AsyncSession = Depends(get_session),
-    *,
-    _: Annotated[User, Depends(get_current_user)]
 ):
     """
-    Get a list of all products.
+    Get a list of all products. Public — anyone can browse the storefront.
     """
     products = await crud_product.get_all_products(session=session)
     return products
