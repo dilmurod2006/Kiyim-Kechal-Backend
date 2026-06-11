@@ -1,7 +1,10 @@
 # Production stack for a single host (e.g. an AWS EC2 instance).
-# The image is built on the server; configuration comes from .env.prod
-# (which lives only on the server, never in git).
+# The image is built ONCE (by the `backend` service); `worker` and `migrate`
+# reuse that same local image. Building the identical tag from several
+# services in parallel breaks the buildx exporter ("image already exists"),
+# so only one service owns the build.
 #
+# Configuration comes from .env.prod (which lives only on the server).
 # Only the API port (8000) is published. Postgres and Redis stay on the
 # internal Docker network and are NOT reachable from the public internet.
 
@@ -33,24 +36,7 @@ services:
       timeout: 5s
       retries: 5
 
-  # One-shot: apply DB migrations, then seed (idempotent). If seeding fails
-  # the API still starts, as long as the schema migration succeeded.
-  migrate:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    image: fastapi-ecom-backend:latest
-    command: >
-      sh -c "alembic upgrade head &&
-             { python seed.py || echo '[seed] seeding step failed - continuing'; }"
-    env_file: .env.prod
-    depends_on:
-      db:
-        condition: service_healthy
-    networks:
-      - app-network
-    restart: "no"
-
+  # The only service that builds the image; the others reuse it.
   backend:
     build:
       context: .
@@ -76,11 +62,25 @@ services:
       - app-network
     restart: unless-stopped
 
-  worker:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
+  # One-shot: apply DB migrations, then seed (idempotent). If seeding fails
+  # the API still starts, as long as the schema migration succeeded.
+  migrate:
     image: fastapi-ecom-backend:latest
+    pull_policy: never
+    command: >
+      sh -c "alembic upgrade head &&
+             { python seed.py || echo '[seed] seeding step failed - continuing'; }"
+    env_file: .env.prod
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+    restart: "no"
+
+  worker:
+    image: fastapi-ecom-backend:latest
+    pull_policy: never
     command: celery -A worker.celery_app worker -I tasks --loglevel=info
     env_file: .env.prod
     depends_on:
