@@ -47,4 +47,8 @@ COPY --from=builder /app /app
 RUN chown -R app:app /app
 USER app
 
-CMD
+EXPOSE 8000
+
+# Default command runs the API server with Gunicorn + Uvicorn workers.
+# The Swarm / compose files override this for the worker and migrate services.
+CMD ["gunicorn", "--workers", "2", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "main:app", "--access-logfile", "-"]

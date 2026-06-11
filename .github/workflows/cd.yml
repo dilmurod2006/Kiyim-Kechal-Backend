@@ -1,0 +1,94 @@
+name: CD - Deploy to Swarm
+
+# Deploys to the production server on every push to main.
+# Runs on a SELF-HOSTED runner that lives on the Swarm manager node,
+# so the image is built locally and consumed directly by the stack
+# (no external registry required).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+# Never run two deployments at the same time.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+env:
+  STACK_NAME: kiyim
+  IMAGE_NAME: fastapi-ecom-backend
+  COMPOSE_FILE: compose.prod.swarm.yaml
+
+jobs:
+  deploy:
+    name: Build & deploy stack
+    runs-on: [self-hosted]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set image tag from commit SHA
+        id: vars
+        run: echo "tag=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Build production image
+        run: |
+          docker build \
+            -f Dockerfile.prod \
+            -t ${IMAGE_NAME}:${{ steps.vars.outputs.tag }} \
+            -t ${IMAGE_NAME}:latest \
+            .
+
+      - name: Verify Swarm is active
+        run: |
+          if ! docker info --format '{{.Swarm.LocalNodeState}}' | grep -q active; then
+            echo "::error::Docker Swarm is not active on this node. Run 'docker swarm init' first."
+            exit 1
+          fi
+
+      - name: Check required secrets exist
+        run: |
+          required="database_url database_sync_url secret_key algorithm \
+                    celery_broker_url celery_result_backend gunicorn_workers \
+                    postgres_user postgres_password postgres_db"
+          missing=""
+          for s in $required; do
+            docker secret inspect "$s" >/dev/null 2>&1 || missing="$missing $s"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing Docker secrets:$missing"
+            echo "Create them with: printf '<value>' | docker secret create <name> -"
+            exit 1
+          fi
+
+      - name: Deploy stack
+        env:
+          IMAGE_TAG: ${{ steps.vars.outputs.tag }}
+        run: |
+          docker stack deploy \
+            --detach=false \
+            --with-registry-auth \
+            -c ${COMPOSE_FILE} \
+            ${STACK_NAME}
+
+      - name: Wait for services to converge
+        run: |
+          echo "Current services:"
+          docker stack services ${STACK_NAME}
+          echo ""
+          echo "Waiting for backend to stabilize..."
+          for i in $(seq 1 30); do
+            replicas=$(docker service ls --filter "name=${STACK_NAME}_backend" --format '{{.Replicas}}')
+            echo "backend replicas: $replicas"
+            case "$replicas" in
+              1/1|2/2|3/3) echo "Backend is healthy."; exit 0 ;;
+            esac
+            sleep 5
+          done
+          echo "::warning::Backend did not report healthy in time. Recent tasks:"
+          docker service ps ${STACK_NAME}_backend --no-trunc | head -n 10
+          exit 1
+
+      - name: Prune old dangling images
+        if: always()
+        run: docker image prune -f

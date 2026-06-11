@@ -1,0 +1,36 @@
+# Git
+.git/
+.gitignore
+.github/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Docs (not needed in image)
+*.md
+!README.md
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+logs/
